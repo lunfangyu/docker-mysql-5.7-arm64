@@ -12,7 +12,7 @@ Cloned from: https://github.com/docker-library/mysql/tree/bdf0905b75bc9f7d91cedd
 
    此步骤目的是，确保在Dockerfile所在目录中执行第3步的镜像构建命令，否则会报错：`COPY failed: file not found in build context or excluded by ……`
 
-3. 执行命令：`docker build -f /container/dockerfile/Dockerfile -t lunfangyu/mysql57:arm64 .`
+3. 执行命令：`docker build -f /container/dockerfile/Dockerfile -t lunfangyu/mysql-5.7-arm64:latest .`
 
 4. 等待执行完成，即可看到镜像
    
@@ -29,10 +29,10 @@ docker run -itd \
 -v /etc/localtime:/etc/localtime:ro \
 -v /container/mysql/data:/var/lib/mysql \
 -e MYSQL_ROOT_PASSWORD="root" \
-lunfangyu/mysql57:arm64
+lunfangyu/mysql-5.7-arm64
 ```
 
-## 已知问题
+## 注意事项
 
 虽然docker运行指令指定了root密码；但第一次创建容器时，root是无密码的。因此在容器初始化完成后，需要进入容器命令行中对root设置密码和开启远程访问
 
