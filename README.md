@@ -8,7 +8,7 @@ Cloned from: https://github.com/docker-library/mysql/tree/bdf0905b75bc9f7d91cedd
 
 1. 在ARM64系统上，下载Dockerfile和docker-entrypoint.sh 到本地目录(也可以根据实际需要自定义，这里是我的目录)：/container/dockerfile
 
-2. 执行命令：`cd /container/dockerfile` 进入Dockerfile所在目录**（重要）**
+2. 执行命令：`cd /container/dockerfile` 进入Dockerfile所在目录（重要）
 
    此步骤目的是，确保在Dockerfile所在目录中执行第3步的镜像构建命令，否则会报错：`COPY failed: file not found in build context or excluded by ……`
 
@@ -46,4 +46,4 @@ lunfangyu/mysql57:arm64
 4. 查询用户信息：`select user, host from user;`
 5. 更新root用户密码：`update user set authentication_string=password('root') where user='root';`
 6. 开启root用户远程连接：`update user set host = '%' where user ='root';`
-7. 刷新信息立即生效：`flush privileges;
+7. 刷新信息立即生效：`flush privileges;`
