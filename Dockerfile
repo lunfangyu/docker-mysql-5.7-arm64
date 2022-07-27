@@ -9,10 +9,6 @@ FROM ubuntu:bionic
 #系统编码
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
-#设置时区
-ENV TZ=Asia/Shanghai
-RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r mysql && useradd -r -g mysql mysql
 
