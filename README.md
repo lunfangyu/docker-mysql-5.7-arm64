@@ -15,6 +15,7 @@ Cloned from: https://github.com/docker-library/mysql/tree/bdf0905b75bc9f7d91cedd
 3. 执行命令：`docker build -f /container/dockerfile/Dockerfile -t lunfangyu/mysql-5.7-arm64:latest .`
 
 4. 等待执行完成，即可看到镜像
+5. 镜像已构建，并推送到dockerhub；怕麻烦的可以直接使用
    
    
 
